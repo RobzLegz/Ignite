@@ -1,7 +1,7 @@
 //Base URL
 const base_url = "https://api.rawg.io/api/";
 
-//Get current time
+//Get current month
 const getCurrentMonth = () => {
     const month = new Date().getMonth() + 1;
     if(month < 10){
@@ -10,6 +10,8 @@ const getCurrentMonth = () => {
         return month;
     }
 };
+
+//Get current day
 const getCurrentDay = () => {
     const day = new Date().getDate();
     if(day < 10){
@@ -18,9 +20,10 @@ const getCurrentDay = () => {
         return day;
     }
 };
+
 const currentYear = new Date().getFullYear();
-const currentMonth= new Date().getCurrentMonth();
-const currentDay = new Date().getCurrentDay();
+const currentMonth = getCurrentMonth();
+const currentDay = getCurrentDay();
 const currentDate = `${currentYear}-${currentMonth}-${currentDay}`;
 const lastYear = `${currentYear - 1}-${currentMonth}-${currentDay}`;
 const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
