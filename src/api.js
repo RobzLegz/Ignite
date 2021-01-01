@@ -28,5 +28,5 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 //Popular games api part
 const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`; //size=10 --- how many games do you want to fetch
 
-//Export popular games url
+//Export url for popular games
 export const popularGamesURL = () => `${base_url}${popular_games}`;
