@@ -1,4 +1,4 @@
-import { act } from "react-dom/test-utils"
+import axios from "axios";
 
 const initialState = {
     popular : [],
@@ -16,4 +16,11 @@ const gamesReducer = (state=initialState, action) => {
     }
 }
 
-export default gamesReducer
+//Action creator
+const fetchGames = () => {
+    return{
+        type: "FETCH_GAMES",
+    };
+};
+
+export default gamesReducer;
