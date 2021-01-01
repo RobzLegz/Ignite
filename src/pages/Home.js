@@ -5,6 +5,7 @@ import Game from "../components/Game";
 import styled from "styled-components";
 import {motion} from "framer-motion";
 import { upcomingGamesURL } from '../api';
+import GameDetail from "../components/GameDetail";
 
 function Home() {
 
@@ -20,6 +21,7 @@ function Home() {
 
     return (
         <GameList>
+            <GameDetail />
             <h2>Popular Games</h2>
             <Games>
                 {popular.map((game) => (
