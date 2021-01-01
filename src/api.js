@@ -30,6 +30,13 @@ const nextYear = `${currentYear + 1}-${currentMonth}-${currentDay}`;
 
 //Popular games api part
 const popular_games = `games?dates=${lastYear},${currentDate}&ordering=-rating&page_size=10`; //size=10 --- how many games do you want to fetch
+//Upcoming games api part
+const upcoming_games = `games?dates=${currentDate},${nextYear}&ordering=-added&page_size=10`;
+//New games api part
+const new_games = `games?dates=${lastYear},${currentDate}&ordering=-released&page_size=10`;
 
-//Export url for popular games
+//Export url for different games
 export const popularGamesURL = () => `${base_url}${popular_games}`;
+export const upcomingGamesURL = () => `${base_url}${upcoming_games}`; 
+export const newGamesURL = () => `${base_url}${new_games}`;
+
