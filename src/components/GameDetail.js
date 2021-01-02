@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {motion} from "framer-motion";
 import {useSelector} from "react-redux";
 import { useHistory } from "react-router-dom";
-import smallImage from "../util";
+import {smallImage} from "../util";
 
 function GameDetail() {
 
@@ -39,14 +39,14 @@ function GameDetail() {
                             </Info>
                         </Stats>
                         <Media>
-                            <img src={smallImage(game.background_image, 1280) } alt="image"/>
+                            <img src={smallImage(game.background_image, 1280)} alt={game.background_image}/>
                         </Media>
                         <Description>
                             <p>{game.description_raw}</p>
                         </Description>
                         <div className="gallery">
-                            {screen.results.map(screen => (
-                                <img src={smallImage(screen.image, 1280)} key={screen.id} alt={screen.id}/>
+                            {screen.results.map((screen) => (
+                                <img src={smallImage(screen.image, 1280)} key={screen.id} alt={screen.image}/>
                             ))}
                         </div>
                     </Detail>
